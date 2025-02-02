@@ -13,8 +13,6 @@ const updateProfile = async () => {
     const githubData = await fetchGitHubProfile('pujarijdevan');
     
     if (githubData) {
-        document.getElementById('github-avatar').src = githubData.avatar_url;
-        // Always use the preferred title instead of GitHub bio
         document.getElementById('github-bio').textContent = 'QA Leadership Engineer with 14+ Years Experience';
         document.getElementById('github-repos').textContent = `Public Repositories: ${githubData.public_repos}`;
     }
